@@ -3,8 +3,6 @@
 import { ShoppingBag } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-
-import {Button} from "@/components/ui/button";
 import useCart from "@/hooks/use-cart";
 
 const NavbarActions = () => {
@@ -22,16 +20,19 @@ const NavbarActions = () => {
   }
 
   return ( 
-    <div className="ml-auto flex items-center gap-x-4">
-      <Button onClick={() => router.push('/cart')} className="flex items-center rounded-full bg-black px-4 py-2">
-        <ShoppingBag
-          size={20}
-          color="white"
-        />
-        <span className="ml-2 text-sm font-medium text-white">
-          {cart.items.length}
-        </span>
-      </Button>
+    <div className="ml-auto flex items-center">
+      <button 
+        onClick={() => router.push('/cart')} 
+        className="relative flex items-center p-2 text-gray-600 hover:text-black transition-colors"
+        aria-label="Shopping Cart"
+      >
+        <ShoppingBag size={24} />
+        {cart.items.length > 0 && (
+          <span className="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-bold leading-none text-white transform translate-x-1/4 -translate-y-1/4 bg-blue-600 rounded-full border-2 border-white">
+            {cart.items.length}
+          </span>
+        )}
+      </button>
     </div>
   );
 }

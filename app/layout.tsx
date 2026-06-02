@@ -10,7 +10,7 @@ import "./globals.css";
 const font = Urbanist({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Loa-Terra",
+  title: "ResellerBus",
   description: `Shop at your fingertips.`,
 };
 

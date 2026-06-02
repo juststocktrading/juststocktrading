@@ -7,6 +7,9 @@ import Container from "@/components/ui/container";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import HeroSection from "@/components/Herosection";
 import DummyProductPage from "@/components/DummyProduct";
+import Newsletter from "@/components/Newsletter";
+import Features from "@/components/Features";
+import Testimonial from "@/components/Testimonial";
 
 const HomePage = async () => {
   const products = await getProducts({ isFeatured: true });
@@ -17,29 +20,50 @@ const HomePage = async () => {
       <HeroSection />
       <Container>
         <div className="space-y-10 pb-10">
-          <div className="">
-            <div className="relative z-20 mt-10 md:mt-20 px-6 flex flex-col items-center mx-auto max-w-4xl text-center">
-              <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
-                Shop by Category
-              </h1>
-
-              <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-prose mx-auto mb-8 leading-relaxed">
-                Carefully curated picks from our best-loved essentials.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-6 lg:px-8">
-              {billboards.slice(0, 6).map((billboard) => (
-                <BillboardCard key={billboard.id} data={billboard} />
-              ))}
-            </div>
-          </div>
-          <ProductList title="Featured Products" items={products} />
+          <ProductList title="New Arrivals" items={products} />
         </div>
       </Container>
-      <DummyProductPage />
-      <WhyChooseUs />
-      <InfoSection />
+      {/* <WhyChooseUs /> */}
+      <Testimonial />
+
+      {/* Our Collections — Bento Grid */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-3">
+              Our collections
+            </h2>
+            <p className="text-sm sm:text-base text-gray-500 max-w-prose">
+              Inspire and let yourself be inspired, from one unique fashion to another.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-[260px]">
+            {billboards[0] && (
+              <BillboardCard
+                key={billboards[0].id}
+                data={billboards[0]}
+                className="md:row-span-2"
+              />
+            )}
+            {billboards[1] && (
+              <BillboardCard
+                key={billboards[1].id}
+                data={billboards[1]}
+              />
+            )}
+            {billboards[2] && (
+              <BillboardCard
+                key={billboards[2].id}
+                data={billboards[2]}
+              />
+            )}
+          </div>
+        </div>
+      </section>
+
+      <Newsletter />
+      <Features />
     </div>
   );
 };

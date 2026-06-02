@@ -63,7 +63,7 @@ const WhyChooseUs: React.FC = () => {
           Why You Should Buy <br className="hidden sm:inline" /> From Us
         </h2>
         <p className="text-center sm:text-left text-gray-700 mb-6 text-sm sm:text-base">
-          Well, let&rsquo;s highlight a few reasons why LOA-Terra should be your
+          Well, let&rsquo;s highlight a few reasons why ResellerBus should be your
           number one ecommerce plug.
         </p>
 

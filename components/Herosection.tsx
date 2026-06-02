@@ -1,60 +1,42 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-// import Navbar from "./navbar";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative w-full min-h-[700px] flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-100 font-inter">
-      {/* Background Images */}
-      <div className="absolute top-0 left-0 w-1/2 h-full z-0">
-        {/* <Image
-          src="/hero.png" 
-          alt="Left decorative"
-          layout="fill"
-          objectFit="contain"
-          className="opacity-60"
-        /> */}
-      </div>
-      <div className="absolute bottom-0 right-0 w-1/2 h-full z-0">
+    <section className="relative w-full h-[100vh] flex flex-col justify-center text-left overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
         <Image
-          src="/hero.png"
-          alt="Right decorative"
-          layout="fill"
-          objectFit="contain"
-          className="opacity-60"
+          src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2000&auto=format&fit=crop"
+          alt="Fashion models"
+          fill
+          className="object-cover object-center"
+          priority
         />
+        {/* Subtle overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/20" />
       </div>
-
-      {/* Navbar */}
-      {/* <div className="relative z-20 w-full">
-        <Navbar />
-      </div> */}
 
       {/* Content */}
-      <div className="relative z-20 mt-10 md:mt-20 px-6 max-w-4xl text-center">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
-          THOUGHTFUL GOODS FOR A <br /> BEAUTIFUL LIFE
-        </h1>
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 md:mt-32">
+        <div className="max-w-3xl">
+          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[90px] font-black leading-[1.1] tracking-tight mb-8">
+            <span className="block text-white">THE SELLER</span>
+            <span className="block text-white">RESELLERS</span>
+            <span className="block text-[#00FF00]">TRUST</span>
+          </h1>
 
-        <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-prose mx-auto mb-8 leading-relaxed">
-          Each piece is thoughtfully designed with gentle materials and enduring
-          craftsmanship. Made to last through seasons—and made to be loved every
-          day.
-        </p>
-
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-          <Link href="/shop" passHref>
-            <button className="bg-[#514DF8] hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-md shadow-lg transition duration-300 ease-in-out text-lg w-full sm:w-auto">
-              Shop Now
-            </button>
-          </Link>
-          <Link href="/discount" passHref>
-            <button className="flex items-center justify-center text-[#514DF8] hover:text-blue-900 font-semibold py-3 px-6 rounded-md transition duration-300 ease-in-out text-lg w-full sm:w-auto">
-              Get 30% discount <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-          </Link>
+          <div className="flex items-center gap-6 mt-12">
+            <Link href="/shop" passHref>
+              <button className="bg-white hover:bg-gray-100 text-black font-bold py-3 sm:py-4 px-8 rounded-full shadow-lg transition duration-300 ease-in-out text-sm sm:text-base whitespace-nowrap">
+                Shop collection
+              </button>
+            </Link>
+            <span className="text-white font-medium text-sm sm:text-base whitespace-nowrap">
+              Wear like a Pro
+            </span>
+          </div>
         </div>
       </div>
     </section>
