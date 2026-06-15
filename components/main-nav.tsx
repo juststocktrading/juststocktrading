@@ -3,10 +3,9 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils"
-import { Category } from "@/types";
 
 interface MainNavProps {
-  data: Category[];
+  // Add any needed props here in the future
 }
 
 const staticRoutes = [
@@ -17,9 +16,7 @@ const staticRoutes = [
   { href: "/contact", label: "Contact" },
 ];
 
-const MainNav: React.FC<MainNavProps> = ({
-  data
-}) => {
+const MainNav: React.FC<MainNavProps> = () => {
   const pathname = usePathname();
 
   return (

@@ -48,7 +48,7 @@ const NavbarContent: React.FC<NavbarContentProps> = ({ categories }) => {
 
           {/* Center Navigation (Desktop Only) */}
           <div className="hidden lg:flex flex-grow justify-center">
-            <MainNav data={categories} />
+            <MainNav />
           </div>
 
           {/* Right Actions */}
