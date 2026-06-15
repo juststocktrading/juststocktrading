@@ -12,6 +12,8 @@ const Billboard: React.FC<BillboardProps> = ({ data }) => {
     return null; // or handle the case when data is null
   }
 
+  
+
   return (
     <div className="p-4 sm:p-6 lg:p-8 rounded-xl overflow-hidden">
       <div
