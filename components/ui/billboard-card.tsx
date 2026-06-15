@@ -24,7 +24,7 @@ const BillboardCard: React.FC<BillboardCardProps> = ({ data, className = "" }) =
           src={data.imageUrl}
           alt={data.label}
           fill
-          className="object-contain object-bottom group-hover:scale-105 transition-transform duration-500"
+          className="object-cover object-bottom group-hover:scale-105 transition-transform duration-500"
         />
       </div>
     </Link>
