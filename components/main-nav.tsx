@@ -13,7 +13,7 @@ const staticRoutes = [
   { href: "/", label: "Home" },
   { href: "/shop", label: "Shop All" },
   { href: "/about", label: "About Us" },
-  { href: "/services", label: "Services" },
+  // { href: "/services", label: "Services" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -50,29 +50,6 @@ const MainNav: React.FC<MainNavProps> = ({
           </Link>
         )
       })}
-      
-      {/* Divider */}
-      {categoryRoutes.length > 0 && (
-        <div className="h-6 w-px bg-gray-300 mx-2" />
-      )}
-
-      {/* Category Links */}
-      {categoryRoutes.map((route) => (
-        <Link
-          key={route.href}
-          href={route.href}
-          className={cn(
-            "text-base transition-colors hover:text-black relative group",
-            route.active ? "text-black" : "text-gray-500"
-          )}
-        >
-          {route.label}
-          {route.active && (
-            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-black rounded-full" />
-          )}
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black rounded-full transition-all group-hover:w-full" />
-        </Link>
-      ))}
     </nav>
   );
 };

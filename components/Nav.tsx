@@ -6,9 +6,9 @@ const Nav = () => {
       <Link href="/" className="hover:text-black text-neutral-600">
         Home
       </Link>
-      <Link href="/services" className="hover:text-black text-neutral-600">
+      {/* <Link href="/services" className="hover:text-black text-neutral-600">
         Services
-      </Link>
+      </Link> */}
       <Link href="/about" className="hover:text-black text-neutral-600">
         About Us
       </Link>
