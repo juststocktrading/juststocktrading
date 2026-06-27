@@ -2,8 +2,8 @@ import { Urbanist } from "next/font/google";
 
 import ModalProvider from "@/providers/modal-provider";
 import ToastProvider from "@/providers/toast-provider";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import StockHeader from "@/components/stock-header";
+import StockFooter from "@/components/stock-footer";
 
 import "./globals.css";
 
@@ -24,9 +24,9 @@ export default function RootLayout({
       <body className={font.className}>
         <ToastProvider />
         <ModalProvider />
-        <Navbar />
+        <StockHeader />
         {children}
-        <Footer />
+        <StockFooter />
       </body>
     </html>
   );
