@@ -6,7 +6,7 @@ const StockAbout: React.FC = () => {
   return (
     <section id="about" className="py-16 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
           <div className="relative aspect-[4/3] rounded-xl overflow-hidden lg:order-2">
             <Image src="/about.jpeg" alt="About Just Stock Trading" fill className="object-cover" />
           </div>

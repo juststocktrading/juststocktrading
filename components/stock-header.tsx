@@ -8,7 +8,7 @@ const StockHeader: React.FC = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full px-10 flex items-center justify-between h-16"
+    <header className="sticky top-0 z-50 w-full px-4 md:px-6 lg:px-10 flex items-center justify-between h-16"
       style={{ backgroundColor: "#4a4a4a", boxShadow: "0 2px 8px rgba(0,0,0,0.25)" }}
     >
       <Link href="/" className="no-underline">
@@ -40,7 +40,7 @@ const StockHeader: React.FC = () => {
             key={item.href}
             href={item.href}
             className="relative text-[#e8e8e8] no-underline text-[0.95rem] font-medium tracking-wide py-1 hover:text-white transition-colors duration-200
-              w-full lg:w-auto px-10 lg:px-0
+              w-full lg:w-auto px-4 md:px-6 lg:px-0
               border-b lg:border-b-0 border-white/10 last:border-b-0
               lg:after:content-[''] lg:after:absolute lg:after:bottom-[-2px] lg:after:left-0 lg:after:h-[2px] lg:after:bg-white lg:after:transition-all lg:after:duration-250 lg:after:w-0 hover:lg:after:w-full"
             onClick={() => setNavOpen(false)}
