@@ -1,4 +1,5 @@
 import { Urbanist } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import ModalProvider from "@/providers/modal-provider";
 import ToastProvider from "@/providers/toast-provider";
@@ -27,6 +28,7 @@ export default function RootLayout({
         <StockHeader />
         {children}
         <StockFooter />
+        <SpeedInsights />
       </body>
     </html>
   );
