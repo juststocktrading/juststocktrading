@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 const StockHeader: React.FC = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -12,7 +11,8 @@ const StockHeader: React.FC = () => {
       style={{ backgroundColor: "#4a4a4a", boxShadow: "0 2px 8px rgba(0,0,0,0.25)" }}
     >
       <Link href="/" className="no-underline">
-        <Image src="/logo.jpg" alt="Logo" width={230} height={56} className="rounded" />
+        {/* <Image src="/logo.jpg" alt="Logo" width={230} height={56} className="rounded" /> */}
+        <h1 className="text-white text-[20px] font-bold tracking-wider">JustStock Trading</h1>
       </Link>
 
       <button

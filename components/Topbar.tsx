@@ -50,7 +50,7 @@ const Topbar: React.FC = () => {
         <div className="order-1 sm:order-2 text-center w-full sm:w-auto">
           <Link href="/" className="inline-block">
             <span className="text-3xl sm:text-4xl font-black text-blue-500">
-              ResellerBus
+              JuststockTrading
             </span>
           </Link>
         </div>

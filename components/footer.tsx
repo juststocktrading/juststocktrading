@@ -19,13 +19,25 @@ const Footer: React.FC = () => {
             Discover timeless pieces for effortless style.
           </p>
           <div className="flex space-x-4">
-            <a href="#" aria-label="Facebook" className="bg-white text-black p-2.5 rounded-full hover:bg-gray-200 transition-colors">
+            <a
+              href="#"
+              aria-label="Facebook"
+              className="bg-white text-black p-2.5 rounded-full hover:bg-gray-200 transition-colors"
+            >
               <Facebook className="h-5 w-5 fill-current border-none" />
             </a>
-            <a href="#" aria-label="Instagram" className="bg-white text-black p-2.5 rounded-full hover:bg-gray-200 transition-colors">
+            <a
+              href="#"
+              aria-label="Instagram"
+              className="bg-white text-black p-2.5 rounded-full hover:bg-gray-200 transition-colors"
+            >
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="#" aria-label="Twitter" className="bg-white text-black p-2.5 rounded-full hover:bg-gray-200 transition-colors">
+            <a
+              href="#"
+              aria-label="Twitter"
+              className="bg-white text-black p-2.5 rounded-full hover:bg-gray-200 transition-colors"
+            >
               <Twitter className="h-5 w-5 fill-current" />
             </a>
           </div>
@@ -82,15 +94,23 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-medium mb-6">Contact</h3>
             <ul className="space-y-4 text-gray-300 text-sm sm:text-base">
               <li className="leading-relaxed">
-                2810 N Church St PMB 48572,<br />Wilmington, Delaware
+                2810 N Church St PMB 48572,
+                <br />
+                Wilmington, Delaware
               </li>
               <li>
-                <a href="tel:+11234567890" className="hover:text-white transition-colors">
+                <a
+                  href="tel:+11234567890"
+                  className="hover:text-white transition-colors"
+                >
                   +1 123 456-7890
                 </a>
               </li>
               <li>
-                <a href="mailto:info@example.com" className="hover:text-white transition-colors">
+                <a
+                  href="mailto:info@example.com"
+                  className="hover:text-white transition-colors"
+                >
                   info@example.com
                 </a>
               </li>
@@ -102,7 +122,7 @@ const Footer: React.FC = () => {
       {/* Bottom Section */}
       <div className="max-w-7xl mx-auto pt-8">
         <p className="text-gray-300 text-sm sm:text-base">
-          Copyright © 2026, ResellerBus.
+          Copyright © 2026, JuststockTrading.
         </p>
       </div>
     </footer>

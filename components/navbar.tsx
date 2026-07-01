@@ -1,12 +1,9 @@
-import getCategories from "@/actions/get-categories";
 import NavbarContent from "./navbar-content";
 
-const Navbar = async () => {
-  const categories = await getCategories();
-
+const Navbar = () => {
   return (
     <>
-      <NavbarContent categories={categories} />
+      <NavbarContent />
       {/* Spacer to prevent content from hiding under the fixed navbar */}
       <div className="h-[80px]" />
     </>
