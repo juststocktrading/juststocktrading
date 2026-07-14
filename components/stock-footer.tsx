@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Music2, Youtube } from "lucide-react";
 
 const StockFooter: React.FC = () => {
   return (
@@ -16,24 +16,20 @@ const StockFooter: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <a href="shop" className="hover:text-white transition-colors">
+                <Link href="/shop" className="hover:text-white transition-colors">
                   Shop
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="hover:text-white transition-colors">
+                <Link href="/about" className="hover:text-white transition-colors">
                   About
-                </a>
+                </Link>
               </li>
+              
               <li>
-                <a href="#testimonials" className="hover:text-white transition-colors">
-                  Reviews
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-white transition-colors">
+                <Link href="/contact" className="hover:text-white transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -83,19 +79,19 @@ const StockFooter: React.FC = () => {
               </a>
               <a
                 href="#"
-                aria-label="Twitter"
+                aria-label="TikTok"
                 className="flex items-center gap-2 text-sm hover:text-white transition-colors"
               >
-                <Twitter className="w-4 h-4" />
-                X (Twitter)
+                <Music2 className="w-4 h-4" />
+                TikTok
               </a>
               <a
                 href="#"
-                aria-label="LinkedIn"
+                aria-label="YouTube"
                 className="flex items-center gap-2 text-sm hover:text-white transition-colors"
               >
-                <Linkedin className="w-4 h-4" />
-                LinkedIn
+                <Youtube className="w-4 h-4" />
+                YouTube
               </a>
             </div>
           </div>

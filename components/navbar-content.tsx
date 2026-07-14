@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { User } from "lucide-react";
+// import { User } from "lucide-react";
 import MainNav from "@/components/main-nav";
 import NavbarActions from "@/components/navbar-actions";
 import MobileMenu from "@/components/mobile-menu";
@@ -50,13 +50,13 @@ const NavbarContent: React.FC = () => {
           {/* Right Actions */}
           <div className="flex items-center gap-1 sm:gap-3 flex-shrink-0">
 
-            <Link
+            {/* <Link
               href="/profile"
               aria-label="User profile"
               className="p-2 text-white hover:text-[#bc2727] rounded-full transition-colors hidden sm:block"
             >
               <User className="h-5 w-5" strokeWidth={2.5} />
-            </Link>
+            </Link> */}
 
             <NavbarActions />
           </div>

@@ -6,22 +6,22 @@ const StockHero: React.FC = () => {
   return (
     <section className="relative w-full min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen flex items-center overflow-hidden">
       <Image
-        src="/back.png"
+        src="/fam.jpg"
         alt="Background"
         fill
         className="object-cover"
         priority
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/30" />
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-28">
-        <p
+        {/* <p
           className="text-[0.6rem] sm:text-[0.7rem] lg:text-[0.75rem] font-bold tracking-[0.18em] uppercase mb-2 sm:mb-3 lg:mb-4"
           style={{ color: "#bc2727" }}
         >
           Delivery available within the UK, Ghana, Nigeria, Gambia and all over Europe
-        </p>
+        </p> */}
         <h1
           className="font-black tracking-tight leading-tight mb-3 sm:mb-4 lg:mb-5 text-white"
           style={{

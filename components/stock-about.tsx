@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { Package, Shield, Clock } from "lucide-react";
 
 const StockAbout: React.FC = () => {
@@ -7,9 +7,9 @@ const StockAbout: React.FC = () => {
     <section id="about" className="py-16 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
-          <div className="relative aspect-[4/3] rounded-xl overflow-hidden lg:order-2">
+          {/* <div className="relative aspect-[4/3] rounded-xl overflow-hidden lg:order-2">
             <Image src="/about.jpeg" alt="About Just Stock Trading" fill className="object-cover" />
-          </div>
+          </div> */}
           <div className="space-y-6 lg:order-1">
             <p className="text-sm tracking-widest text-gray-500 uppercase">
               About Just Stock Trading

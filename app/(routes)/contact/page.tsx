@@ -66,7 +66,7 @@ const ContactPage = () => {
           priority
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-black/80" />
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto -mt-10 lg:-mt-20">
           <p className="text-[#bc2727] font-bold tracking-[0.2em] uppercase mb-4 text-sm sm:text-base">
@@ -119,7 +119,7 @@ const ContactPage = () => {
 
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl hidden md:block group">
                 <Image
-                  src="/hold.jpg"
+                  src="/men.png"
                   alt="Customer support"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"

@@ -117,7 +117,7 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="relative w-full min-h-[70vh] flex items-center justify-center">
         <Image
-          src="/about.jpeg"
+          src="/men.png"
           alt="Just Stock Trading Warehouse"
           fill
           priority
@@ -186,7 +186,7 @@ const AboutPage = () => {
             <div className="relative">
               <div className="relative aspect-square lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/back.png"
+                  src="/men.png"
                   alt="Our Story"
                   fill
                   className="object-cover"
