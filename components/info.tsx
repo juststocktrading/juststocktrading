@@ -98,23 +98,6 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         </div>
       )}
 
-      {selectedVariation.stock > 0 ? (
-        <div className="flex items-center gap-2 text-sm">
-          <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          <span className="text-green-600 font-medium">In Stock</span>
-          {selectedVariation.stock <= 5 && (
-            <span className="text-muted-foreground">
-              &mdash; Only {selectedVariation.stock} left
-            </span>
-          )}
-        </div>
-      ) : (
-        <div className="flex items-center gap-2 text-sm">
-          <span className="w-2 h-2 rounded-full bg-destructive" />
-          <span className="text-destructive font-medium">Out of Stock</span>
-        </div>
-      )}
-
       <div className="flex flex-col sm:flex-row gap-3 pt-2">
         <Button
           onClick={onBuyNow}
