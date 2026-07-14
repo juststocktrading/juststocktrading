@@ -4,6 +4,7 @@ import ModalProvider from "@/providers/modal-provider";
 import ToastProvider from "@/providers/toast-provider";
 import Navbar from "@/components/navbar";
 import StockFooter from "@/components/stock-footer";
+import WhatsAppFloat from "@/components/whatsapp-float";
 
 import "./globals.css";
 
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <StockFooter />
+        <WhatsAppFloat />
       </body>
     </html>
   );

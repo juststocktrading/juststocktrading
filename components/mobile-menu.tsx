@@ -1,6 +1,6 @@
 "use client";
 
-import { X, Menu, Search, User, Heart } from "lucide-react";
+import { X, Menu, Search } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
@@ -74,7 +74,7 @@ const MobileMenu = () => {
           </div>
 
           {/* Quick Actions */}
-          <div className="flex justify-around py-5 border-b border-white/10 px-5">
+          {/* <div className="flex justify-around py-5 border-b border-white/10 px-5">
             <Link
               href="/profile"
               onClick={toggleMenu}
@@ -91,7 +91,7 @@ const MobileMenu = () => {
               <Heart size={24} />
               <span className="text-[10px] font-bold uppercase tracking-widest">Wishlist</span>
             </Link>
-          </div>
+          </div> */}
 
           <nav className="flex flex-col p-5 space-y-6">
             {/* Static Links */}
