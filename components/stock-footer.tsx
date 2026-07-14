@@ -40,19 +40,19 @@ const StockFooter: React.FC = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-gray-400" />
                 <span>
-                  123 Main Street,<br />Leeds, LS1 1AB, UK
+                  Accent business centre BD3 9BD, England, United Kingdom
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 shrink-0 text-gray-400" />
-                <a href="tel:+441130000000" className="hover:text-white transition-colors">
-                  +44 113 000 0000
+                <a href="tel:+447344056285" className="hover:text-white transition-colors">
+                  +44 (0) 7344056285
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 shrink-0 text-gray-400" />
-                <a href="mailto:contact@juststocktrading.com" className="hover:text-white transition-colors">
-                  contact@juststocktrading.co.uk
+                <a href="mailto:info@juststocktrading.co.uk" className="hover:text-white transition-colors">
+                  info@juststocktrading.co.uk
                 </a>
               </li>
             </ul>
@@ -70,7 +70,7 @@ const StockFooter: React.FC = () => {
                 Facebook
               </a>
               <a
-                href="#"
+                href="https://instagram.com/juststocktrading"
                 aria-label="Instagram"
                 className="flex items-center gap-2 text-sm hover:text-white transition-colors"
               >
@@ -78,7 +78,7 @@ const StockFooter: React.FC = () => {
                 Instagram
               </a>
               <a
-                href="#"
+                href="https://tiktok.com/@juststocktrading"
                 aria-label="TikTok"
                 className="flex items-center gap-2 text-sm hover:text-white transition-colors"
               >
