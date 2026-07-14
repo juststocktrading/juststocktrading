@@ -3,7 +3,6 @@ import React from "react";
 import getBillboards from "@/actions/get-billboards";
 import getProducts from "@/actions/get-products";
 import getSizes from "@/actions/get-sizes";
-import getColors from "@/actions/get-colors";
 
 import BillboardCard from "@/components/ui/billboard-card";
 import Container from "@/components/ui/container";
@@ -13,22 +12,20 @@ import ProductCard from "@/components/ui/product-card";
 import NoResults from "@/components/ui/no-results";
 
 interface ShopPageProps {
-  searchParams: Promise<{ colorId?: string; sizeId?: string }> | undefined;
+  searchParams: Promise<{ sizeId?: string }> | undefined;
 }
 
 const ShopPage = async ({ searchParams }: ShopPageProps) => {
-  // Await searchParams to get colorId and sizeId, or use undefined if searchParams is undefined
-  const { colorId, sizeId } = (await searchParams) ?? {
-    colorId: undefined,
+  // Await searchParams to get sizeId, or use undefined if searchParams is undefined
+  const { sizeId } = (await searchParams) ?? {
     sizeId: undefined,
   };
 
-  const [sizes, colors] = await Promise.all([getSizes(), getColors()]);
+  const [sizes] = await Promise.all([getSizes()]);
 
   const [products, billboards] = await Promise.all([
     getProducts({
       isFeatured: true,
-      ...(colorId && { colorId }),
       ...(sizeId && { sizeId }),
     }),
     getBillboards(),
@@ -58,12 +55,9 @@ const ShopPage = async ({ searchParams }: ShopPageProps) => {
           {/* Filters + Product List */}
           <div className="px-4 sm:px-6 lg:px-8 pb-24">
             <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
-              <MobileFilters sizes={sizes} 
-              // colors={colors} 
-              />
+              <MobileFilters sizes={sizes} />
               <div className="hidden lg:block">
                 <Filter valueKey="sizeId" name="Sizes" data={sizes} />
-                <Filter valueKey="colorId" name="Colors" data={colors} />
               </div>
               <div className="mt-6 lg:col-span-4 lg:mt-0">
                 {products.length === 0 && <NoResults />}

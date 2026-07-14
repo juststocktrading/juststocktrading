@@ -19,7 +19,7 @@ const ProductList: React.FC<ProductListProps> = ({ title, items }) => {
           </h2>
           <div className="flex items-center justify-between">
             <p className="text-sm sm:text-base text-gray-500">
-              Shop the Latest Styles: Stay ahead of the curve with our newest arrivals
+              Shop the Latest Styles: Stay ahead of the curve with our best sellers
             </p>
             <Link
               href="/shop"
