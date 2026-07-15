@@ -3,7 +3,7 @@ import { Package, Shield, Clock } from "lucide-react";
 
 const StockAbout: React.FC = () => {
   return (
-    <section id="about" className="py-16 sm:py-20 bg-background">
+    <section id="about" className="py-16 sm:py-20 bg-background scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
           <div className="space-y-6 lg:order-1">

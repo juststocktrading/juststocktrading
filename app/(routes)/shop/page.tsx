@@ -4,7 +4,7 @@ import getBillboards from "@/actions/get-billboards";
 import getProducts from "@/actions/get-products";
 import getSizes from "@/actions/get-sizes";
 
-import BillboardCard from "@/components/ui/billboard-card";
+// import BillboardCard from "@/components/ui/billboard-card";
 import Container from "@/components/ui/container";
 import Filter from "./components/filter";
 import MobileFilters from "./components/mobile-filters";
@@ -22,7 +22,9 @@ const ShopPage = async ({ searchParams }: ShopPageProps) => {
 
   const [sizes] = await Promise.all([getSizes()]);
 
-  const [products, billboards] = await Promise.all([
+  const [products, 
+    // billboards
+  ] = await Promise.all([
     getProducts({
       isFeatured: true,
       ...(sizeId && { sizeId }),
@@ -43,11 +45,11 @@ const ShopPage = async ({ searchParams }: ShopPageProps) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {billboards.slice(0, 6).map((billboard) => (
               <BillboardCard key={billboard.id} data={billboard} />
             ))}
-          </div>
+          </div> */}
 
           <div className="pb-24">
             <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
