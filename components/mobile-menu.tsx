@@ -6,7 +6,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 const staticLinks = [
-  // { href: "/", label: "Home" },
+  { href: "/", label: "Home" },
   { href: "/shop", label: "Shop " },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },

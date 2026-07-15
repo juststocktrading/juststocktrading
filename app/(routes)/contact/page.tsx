@@ -33,8 +33,8 @@ const features = [
 ];
 
 const contactInfo = [
-  { icon: MapPin, title: "Our Headquarters", details: "Accent business centre BD3 9BD, England, United Kingdom" },
-  { icon: Phone, title: "Call", details: "+44 (0) 7344056285" },
+  { icon: MapPin, title: "Our Headquarters", details: "Unit 7, 5 Alive, York Road, Bradford BD8 0HR" },
+  { icon: Phone, title: "Call", details: "+44 7344 056285" },
   { icon: Mail, title: "Email", details: "info@juststocktrading.co.uk" },
   { icon: Clock, title: "Working Hours", details: "Mon-Fri: 9am - 6pm (GMT)" },
 ];

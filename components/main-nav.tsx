@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils"
 
 const staticRoutes = [
-  // { href: "/", label: "Home" },
+  { href: "/", label: "Home" },
   { href: "/shop", label: "Shop" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },

@@ -92,3 +92,4 @@ const StockFooter: React.FC = () => {
 };
 
 export default StockFooter;
+
