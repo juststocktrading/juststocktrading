@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { MapPin, Phone, Mail, Music2 } from "lucide-react";
+import { MapPin, Phone, Mail, MessageCircle, Music2 } from "lucide-react";
 
 const StockFooter: React.FC = () => {
   return (
@@ -55,28 +55,23 @@ const StockFooter: React.FC = () => {
                   info@juststocktrading.co.uk
                 </a>
               </li>
+              <li className="flex items-center gap-3">
+                <MessageCircle className="w-4 h-4 shrink-0 text-gray-400" />
+                <a
+                  href="https://wa.me/447353243741?text=Hello%2C%20I%27m%20interested%20in%20your%20wholesale%20clothing%20supply."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  WhatsApp
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-white font-semibold text-lg mb-4">Follow Us</h3>
             <div className="flex flex-wrap gap-4">
-              {/* <a
-                href="#"
-                aria-label="Facebook"
-                className="flex items-center gap-2 text-sm hover:text-white transition-colors"
-              >
-                <Facebook className="w-4 h-4" />
-                Facebook
-              </a>
-              <a
-                href="https://instagram.com/juststocktrading"
-                aria-label="Instagram"
-                className="flex items-center gap-2 text-sm hover:text-white transition-colors"
-              >
-                <Instagram className="w-4 h-4" />
-                Instagram
-              </a> */}
               <a
                 href="https://tiktok.com/@resellerbus"
                 aria-label="TikTok"
@@ -85,14 +80,6 @@ const StockFooter: React.FC = () => {
                 <Music2 className="w-4 h-4" />
                 TikTok
               </a>
-              {/* <a
-                href="#"
-                aria-label="YouTube"
-                className="flex items-center gap-2 text-sm hover:text-white transition-colors"
-              >
-                <Youtube className="w-4 h-4" />
-                YouTube
-              </a> */}
             </div>
           </div>
         </div>
