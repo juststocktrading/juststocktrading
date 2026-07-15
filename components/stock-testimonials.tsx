@@ -98,8 +98,8 @@ const StarRating: React.FC<{ count: number }> = ({ count }) => (
     {[1, 2, 3, 4, 5].map((i) => (
       <Star
         key={i}
-        className={`w-4 h-4 ${
-          i <= count ? "text-yellow-400 fill-yellow-400" : "text-gray-300"
+        className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${
+          i <= count ? "text-yellow-400 fill-yellow-400" : "text-muted"
         }`}
       />
     ))}
@@ -150,13 +150,13 @@ const StockTestimonials: React.FC = () => {
   };
 
   return (
-    <section id="testimonials" className="py-16 sm:py-20 bg-gray-50">
+    <section id="testimonials" className="py-16 sm:py-20 bg-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+        <div className="text-center mb-10 sm:mb-12">
+          <h2 className="text-2xl sm:text-4xl font-bold text-card-foreground mb-2">
             What Our Customers Say
           </h2>
-          <p className="text-gray-500">
+          <p className="text-sm sm:text-base text-muted-foreground">
             Real reviews from people who love our products.
           </p>
         </div>
@@ -169,30 +169,30 @@ const StockTestimonials: React.FC = () => {
             onTouchEnd={handleTouchEnd}
           >
             {slides.map((slide, si) => (
-              <div key={si} className="min-w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div key={si} className="min-w-full grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                 {slide.map((review, ri) => (
                   <div
                     key={ri}
-                    className="bg-white rounded-xl p-6 border border-gray-200 flex flex-col justify-between"
+                    className="bg-card rounded-xl p-5 sm:p-6 border flex flex-col justify-between"
                   >
-                    <div className="space-y-4">
+                    <div className="space-y-3 sm:space-y-4">
                       <StarRating count={review.stars} />
-                      <p className="text-gray-700 text-sm leading-relaxed">
+                      <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
                         &ldquo;{review.quote}&rdquo;
                       </p>
                     </div>
-                    <div className="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
+                    <div className="flex items-center gap-3 mt-4 sm:mt-6 pt-3 sm:pt-4 border-t">
                       <div
-                        className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold"
+                        className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold shrink-0"
                         style={{ background: review.color }}
                       >
                         {review.initials}
                       </div>
-                      <div>
-                        <div className="font-semibold text-sm text-gray-900">
+                      <div className="min-w-0">
+                        <div className="font-semibold text-xs sm:text-sm text-card-foreground truncate">
                           {review.name}
                         </div>
-                        <div className="text-xs text-gray-500">
+                        <div className="text-[10px] sm:text-xs text-muted-foreground truncate">
                           {review.role}
                         </div>
                       </div>
@@ -203,21 +203,21 @@ const StockTestimonials: React.FC = () => {
             ))}
           </div>
 
-          <div className="flex items-center justify-center gap-4 mt-8">
+          <div className="flex items-center justify-center gap-4 mt-6 sm:mt-8">
             <button
-              className="p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors disabled:opacity-30"
+              className="p-1.5 sm:p-2 rounded-full border hover:bg-accent transition-colors disabled:opacity-30"
               onClick={() => moveSlide(-1)}
               disabled={current === 0}
               aria-label="Previous slide"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
             <div className="flex gap-2">
               {slides.map((_, i) => (
                 <button
                   key={i}
-                  className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                    i === current ? "bg-gray-800" : "bg-gray-300"
+                  className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-colors ${
+                    i === current ? "bg-card-foreground" : "bg-border"
                   }`}
                   onClick={() => goToSlide(i)}
                   aria-label={`Go to slide ${i + 1}`}
@@ -225,12 +225,12 @@ const StockTestimonials: React.FC = () => {
               ))}
             </div>
             <button
-              className="p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors disabled:opacity-30"
+              className="p-1.5 sm:p-2 rounded-full border hover:bg-accent transition-colors disabled:opacity-30"
               onClick={() => moveSlide(1)}
               disabled={current === total - 1}
               aria-label="Next slide"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </div>
         </div>

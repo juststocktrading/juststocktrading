@@ -16,9 +16,7 @@ interface CategoryPageProps {
 }
 
 const CategoryPage = async ({ params, searchParams }: CategoryPageProps) => {
-  // Await params to get categoryId
   const { categoryId } = await params;
-  // Await searchParams to get colorId and sizeId, or use undefined if searchParams is undefined
   const { sizeId } = (await searchParams) ?? {
     sizeId: undefined,
   };
@@ -37,7 +35,7 @@ const CategoryPage = async ({ params, searchParams }: CategoryPageProps) => {
     <div className="bg-background">
       <Container>
         <Billboard data={category?.billboard ?? null} />
-        <div className="px-4 sm:px-6 lg:px-8 pb-24">
+        <div className="pb-16 sm:pb-24">
           <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
             <MobileFilters sizes={sizes} />
             <div className="hidden lg:block">

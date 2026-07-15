@@ -10,13 +10,12 @@ import { Product } from "@/types";
 
 interface CartItemProps {
   data: Product;
-  variationId?: string; 
+  variationId?: string;
 }
 
 const CartItem: React.FC<CartItemProps> = ({ data, variationId }) => {
   const cart = useCart();
 
-  // Select the variation (use variationId if provided, else first variation)
   const variation = variationId
     ? data.variations.find((v) => v.id === variationId)
     : data.variations[0];
@@ -28,14 +27,14 @@ const CartItem: React.FC<CartItemProps> = ({ data, variationId }) => {
   if (!variation) {
     return (
       <li className="flex py-6 border-b">
-        <p className="text-red-500">No variation available for {data.name}</p>
+        <p className="text-destructive text-sm">No variation available for {data.name}</p>
       </li>
     );
   }
 
   return (
-    <li className="flex py-6 border-b">
-      <div className="relative h-24 w-24 rounded-md overflow-hidden sm:h-48 sm:w-48">
+    <li className="flex py-6 border-b gap-4 sm:gap-6">
+      <div className="relative h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 rounded-lg overflow-hidden bg-muted shrink-0">
         <Image
           fill
           src={
@@ -45,24 +44,22 @@ const CartItem: React.FC<CartItemProps> = ({ data, variationId }) => {
           }
           alt={data.name}
           className="object-cover object-center"
+          sizes="120px"
         />
       </div>
-      <div className="relative ml-4 flex flex-1 flex-col justify-between sm:ml-6">
+      <div className="relative flex flex-1 flex-col justify-between min-w-0">
         <div className="absolute z-10 right-0 top-0">
           <IconButton onClick={onRemove} icon={<X size={15} />} />
         </div>
-        <div className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0">
-          <div className="flex justify-between">
-            <p className="text-lg font-semibold text-black">{data.name}</p>
+        <div className="pr-8 sm:pr-0">
+          <p className="text-base sm:text-lg font-semibold text-card-foreground truncate">{data.name}</p>
+          <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1 text-xs sm:text-sm text-muted-foreground">
+            {variation.size?.name && (
+              <span>Size: {variation.size.name}</span>
+            )}
           </div>
-          <div className="mt-1 flex text-sm">
-            <p className="text-gray-500">
-              {variation.color?.name ?? "No color"}
-            </p>
-            <p className="ml-4 border-l border-gray-200 pl-4 text-gray-500">
-              {variation.size?.name ?? "No size"}
-            </p>
-          </div>
+        </div>
+        <div className="mt-2">
           <Currency value={variation.price} />
         </div>
       </div>

@@ -3,7 +3,7 @@
 import { MessageCircle } from "lucide-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/447344056285?text=Hello%2C%20I%27m%20interested%20in%20your%20wholesale%20clothing%20supply.";
+  "https://wa.me/447353243741?text=Hello%2C%20I%27m%20interested%20in%20your%20wholesale%20clothing%20supply.";
 
 const WhatsAppFloat = () => {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { X, Menu, Search } from "lucide-react";
+import { X, Menu } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
@@ -14,7 +14,7 @@ const staticLinks = [
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [searchTerm, setSearchTerm] = useState("");
   const pathname = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -58,7 +58,7 @@ const MobileMenu = () => {
         {/* Scrollable Content */}
         <div className="flex-1 overflow-y-auto">
           {/* Mobile Search */}
-          <div className="p-5 sm:hidden">
+          {/* <div className="p-5 sm:hidden">
             <div className="relative w-full">
               <input
                 type="text"
@@ -71,7 +71,7 @@ const MobileMenu = () => {
                 <Search size={20} />
               </button>
             </div>
-          </div>
+          </div> */}
 
           {/* Quick Actions */}
           {/* <div className="flex justify-around py-5 border-b border-white/10 px-5">

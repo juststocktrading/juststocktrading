@@ -16,7 +16,6 @@ interface ShopPageProps {
 }
 
 const ShopPage = async ({ searchParams }: ShopPageProps) => {
-  // Await searchParams to get sizeId, or use undefined if searchParams is undefined
   const { sizeId } = (await searchParams) ?? {
     sizeId: undefined,
   };
@@ -32,28 +31,25 @@ const ShopPage = async ({ searchParams }: ShopPageProps) => {
   ]);
 
   return (
-    <div className="w-full overflow-hidden bg-slate-50">
+    <div className="w-full overflow-hidden bg-background">
       <Container>
         <div className="space-y-10 pb-10">
-          {/* Header Section */}
-          <div className="relative z-20 mt-10 md:mt-20 px-6 flex flex-col items-center mx-auto max-w-4xl text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+          <div className="relative z-20 mt-10 md:mt-20 flex flex-col items-center mx-auto max-w-4xl text-center">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-foreground leading-tight mb-4">
               Products page
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-prose mx-auto mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-prose mx-auto mb-8 leading-relaxed">
               Carefully curated picks from our best-loved essentials.
             </p>
           </div>
 
-          {/* Billboard Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {billboards.slice(0, 6).map((billboard) => (
               <BillboardCard key={billboard.id} data={billboard} />
             ))}
           </div>
 
-          {/* Filters + Product List */}
-          <div className="px-4 sm:px-6 lg:px-8 pb-24">
+          <div className="pb-24">
             <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
               <MobileFilters sizes={sizes} />
               <div className="hidden lg:block">

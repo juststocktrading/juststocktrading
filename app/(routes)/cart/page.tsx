@@ -22,27 +22,40 @@ const CartPage = () => {
   }
 
   return (
-    <div className="bg-white">
+    <div className="bg-background min-h-screen">
       <Container>
-        <div className="px-4 py-16 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-black">Shopping Cart</h1>
-          <div className="mt-12 lg:grid lg:grid-cols-12 lg:items-start gap-x-12">
+        <div className="py-10 sm:py-16">
+          <h1 className="text-2xl sm:text-3xl font-bold text-card-foreground">Shopping Cart</h1>
+          <div className="mt-8 sm:mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12">
             <div className="lg:col-span-7">
               {cart.items.length === 0 && (
-                <p className="text-neutral-500">No items added to cart.</p>
+                <p className="text-muted-foreground">No items added to cart.</p>
               )}
-              <ul>
-                {cart.items.map((item) => (
-                  <CartItem
-                    key={`${item.product.id}-${item.variationId}`}
-                    data={item.product}
-                    variationId={item.variationId}
-                  />
-                ))}
-              </ul>
-              <Button onClick={cart.removeAll}>Clear Cart</Button>
+              {cart.items.length > 0 && (
+                <div className="space-y-4">
+                  <ul className="divide-y">
+                    {cart.items.map((item) => (
+                      <CartItem
+                        key={`${item.product.id}-${item.variationId}`}
+                        data={item.product}
+                        variationId={item.variationId}
+                      />
+                    ))}
+                  </ul>
+                  <Button
+                    onClick={cart.removeAll}
+                    variant="outline"
+                    size="sm"
+                    className="mt-4"
+                  >
+                    Clear Cart
+                  </Button>
+                </div>
+              )}
             </div>
-            <Summary />
+            <div className="mt-8 lg:mt-0 lg:col-span-5">
+              <Summary />
+            </div>
           </div>
         </div>
       </Container>

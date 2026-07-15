@@ -22,7 +22,7 @@ const BillboardCard: React.FC<BillboardCardProps> = ({ data, className = "" }) =
       />
 
       {/* Label overlay */}
-      <h3 className="relative text-xl sm:text-2xl font-bold text-gray-900 p-5 sm:p-6 z-10">
+      <h3 className="relative text-lg sm:text-xl lg:text-2xl font-bold text-card-foreground p-4 sm:p-5 lg:p-6 z-10">
         {data.label}
       </h3>
     </Link>
