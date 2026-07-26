@@ -3,7 +3,8 @@ import { Urbanist } from "next/font/google";
 import ModalProvider from "@/providers/modal-provider";
 import ToastProvider from "@/providers/toast-provider";
 import Navbar from "@/components/navbar";
-import StockFooter from "@/components/stock-footer";
+// import StockFooter from "@/components/stock-footer";
+import Footer from "@/components/ui/Footer";
 import WhatsAppFloat from "@/components/whatsapp-float";
 
 import "./globals.css";
@@ -27,7 +28,8 @@ export default function RootLayout({
         <ModalProvider />
         <Navbar />
         {children}
-        <StockFooter />
+        {/* <StockFooter /> */}
+        <Footer />
         <WhatsAppFloat />
       </body>
     </html>
