@@ -1,12 +1,12 @@
 import { Instagram, ArrowRight } from "lucide-react";
 
 const quickLinks = [
-  { label: "Search", href: "/search" },
+  // { label: "Search", href: "/search" },
   { label: "FAQ", href: "/faq" },
-  { label: "Shipping Policy", href: "/shipping-policy" },
-  { label: "Refunds and Returns Policy", href: "/refund-policy" },
+  // { label: "Shipping Policy", href: "/shipping-policy" },
+  // { label: "Refunds and Returns Policy", href: "/refund-policy" },
   { label: "Terms & Conditions", href: "/terms-of-service" },
-  { label: "Accessibility", href: "/accessibility" },
+  // { label: "Accessibility", href: "/accessibility" },
   { label: "Pre-Orders", href: "/preorders" },
 ];
 
@@ -135,7 +135,7 @@ export default function Footer() {
           <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-center text-[13px] text-neutral-500">
             <span>© {new Date().getFullYear()}, Just Stock Trading Powered by QWik Multi Services</span>
             <span>·</span>
-            <a href="/policies/privacy-policy" className="hover:text-neutral-800 hover:underline underline-offset-4">
+            <a href="#" className="hover:text-neutral-800 hover:underline underline-offset-4">
               Privacy policy
             </a>
           </div>
